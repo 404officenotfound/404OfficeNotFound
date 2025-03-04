@@ -74,6 +74,14 @@
         )
     </insert>
 
+    <delete id="deleteMenu" parameterType="int">
+        DELETE
+        FROM
+        tbl_menu
+        WHERE
+        menu_code = #{code}
+    </delete>
+
     <update id="updateMenu" parameterType="com.ohgiraffers.crud.menu.model.dto.MenuDTO">
         UPDATE tbl_menu
         SET

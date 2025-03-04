@@ -79,6 +79,17 @@ public class MenuController {
         return "redirect:/menu/list";
     }
 
+    @PostMapping("/delete/{code}")
+    public String deleteMenu(@PathVariable("code") int code,
+                             RedirectAttributes rAttr) {
+
+        menuService.deleteMenu(code);
+
+        rAttr.addFlashAttribute("successMessage", "메뉴가 성공적으로 삭제되었습니다.");
+
+        return "redirect:/menu/list";
+    }
+
     @GetMapping("/edit/{code}")
     public String showEditMenuForm(@PathVariable("code") int code,
                                    Model model) {
