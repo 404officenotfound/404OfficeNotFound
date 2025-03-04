@@ -16,4 +16,6 @@ public interface MenuMapper {
     MenuDTO findMenuByCode(int code);
 
     void registNewMenu(MenuDTO newMenu);
+
+    void updateMenu(MenuDTO menu);
 }

@@ -35,4 +35,11 @@ public class MenuService {
     public void registNewMenu(MenuDTO newMenu) {
         menuMapper.registNewMenu(newMenu);
     }
+
+    @Transactional
+    public void updateMenu(MenuDTO menu) {
+        menuMapper.updateMenu(menu);
+    }
+
+
 }
