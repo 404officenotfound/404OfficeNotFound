@@ -40,4 +40,11 @@ public class MenuService {
     public void deleteMenu(int code) {
         menuMapper.deleteMenu(code);
     }
+
+    @Transactional
+    public void updateMenu(MenuDTO menu) {
+        menuMapper.updateMenu(menu);
+    }
+
+
 }
