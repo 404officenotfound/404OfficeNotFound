@@ -39,4 +39,14 @@ public class MenuController {
         return "menu/list";
     }
 
+    @GetMapping("/detail/{code}")
+    public String findMenuDetail(@PathVariable("code") int code,
+                                 Model model) {
+
+        MenuDTO menu = menuService.findMenuByCode(code);
+
+        model.addAttribute("menu", menu);
+
+        return "menu/detail";
+    }
 }
