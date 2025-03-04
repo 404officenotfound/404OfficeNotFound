@@ -14,4 +14,6 @@ public interface MenuMapper {
     List<CategoryDTO> findAllCategory();
 
     MenuDTO findMenuByCode(int code);
+
+    void registNewMenu(MenuDTO newMenu);
 }
